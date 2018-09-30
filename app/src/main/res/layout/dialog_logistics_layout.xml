@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="状态跟踪"
+        android:textSize="16sp"
+        android:padding="10dp"
+        />
+    <TextView
+        android:id="@+id/dialog_logistics_tip_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前无物流信息状态，有问题请点击右上角联系客服"
+        android:textSize="16sp"
+        android:padding="10dp"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/dialog_logistics_layout_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        />
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp">
+
+    <TextView
+        android:id="@+id/item_msg_user_text_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:includeFontPadding="false"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/colorOrigin"
+        />
+</RelativeLayout>

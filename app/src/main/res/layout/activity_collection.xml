@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--首页标题-->
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/activity_collection_back_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/go_back"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="返回"
+            android:textColor="@color/color666666"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="7dp"
+            android:gravity="center"
+            android:text="视频收藏"
+            android:textColor="@color/color666666"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/activity_collection_edit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="7dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="编辑"
+            android:textColor="@color/color666666"
+            android:textSize="14sp" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dbdbdb" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/zq_refreshlayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+            <!--<include-->
+            <!--android:id="@+id/recyclerView_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--layout="@layout/layout_recyclerview"-->
+            <!--/>-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color999999" />
+
+            <LinearLayout
+                android:id="@+id/activity_collection_edit_ll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/activity_collection_select_all_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="全选"
+                    android:textColor="@color/color333333"
+                    android:textSize="17sp" />
+
+                <View
+                    android:layout_width="0.1dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/color999999" />
+
+                <TextView
+                    android:id="@+id/activity_collection_delete_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="删除"
+                    android:textColor="@color/color333333"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <com.lwd.qjtv.view.LoadingPageView
+
+            android:id="@+id/loading_framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</LinearLayout>

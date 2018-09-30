@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/y50">
+
+    <TextView
+        android:id="@+id/item_guess_center_guess__atv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="5dp"
+        android:text="竞猜"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/item_guess_center_rate_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_guess_center_guess__atv"
+        android:layout_marginBottom="@dimen/x35"
+        android:layout_toLeftOf="@id/item_guess_center_guess__atv"
+        android:layout_toRightOf="@+id/item_guess_center_mod_tv"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x125"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.lwd.qjtv.view.RoundImageView
+                android:id="@+id/item_guess_center_left_head_riv"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/video_place_holder" />
+
+            <TextView
+                android:id="@+id/item_guess_center_left_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:text="塞尔比"
+                android:textColor="@color/color333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y20"
+                android:text="VS"
+                android:textColor="@color/color333333"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/item_guess_center_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="5月4日 16:30"
+                android:textColor="@color/color999999"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_guess_center_guess_tv"
+                android:layout_width="60dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="@dimen/y40"
+                android:background="@drawable/circle_corner_shape"
+                android:gravity="center"
+                android:text="竞猜"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/item_guess_center_bifen_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/x125"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.lwd.qjtv.view.RoundImageView
+                android:id="@+id/item_guess_center_right_head_riv"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@mipmap/video_place_holder" />
+
+            <TextView
+                android:id="@+id/item_guess_center_right_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:text="塞尔比"
+                android:textColor="@color/color333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_guess_center_mod_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/item_guess_center_rate_ll"
+        android:layout_alignParentLeft="true"
+        android:padding="5dp"
+        android:text="标准胜负"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y15"
+        android:layout_below="@id/item_guess_center_rate_ll"
+        android:background="@color/f3f3f3" />
+</RelativeLayout>

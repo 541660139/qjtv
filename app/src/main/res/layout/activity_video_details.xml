@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_video_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.jess.arms.widget.autolayout.AutoToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            app:contentInsetStart="0dp">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/toolbar_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/back_iv"
+                    android:drawableLeft="@mipmap/go_back"
+                    android:text="返回"
+                    android:textColor="@color/color999999"
+                    android:textSize="18sp" />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="羽毛球tv"
+                android:textColor="@color/color666666"
+                android:textSize="18dp"
+                android:transitionName="@string/zi" />
+
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/toolbar_sc"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right">
+
+
+                <ImageView
+                    android:id="@+id/iv_sc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/nav_icon_shoucang_n" />
+
+
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+        </com.jess.arms.widget.autolayout.AutoToolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dbdbdb" />
+    </LinearLayout>
+
+    <com.shuyu.gsyvideoplayer.video.ListGSYVideoPlayer
+        android:id="@+id/danmaku_player"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/title_layout"
+        android:background="@mipmap/video_place_holder"
+        android:transitionName="@string/tu" />
+
+    <RelativeLayout
+        android:id="@+id/rl_zan_ping_feng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/danmaku_player">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_video_zan"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="2dp"
+                android:src="@mipmap/dainzan"
+                android:transitionName="@string/tu1" />
+
+            <TextView
+                android:id="@+id/tv_video_zan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="2dp"
+                android:text="10" />
+
+            <ImageView
+                android:id="@+id/iv_video_fx"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="2dp"
+                android:padding="2dp"
+                android:src="@mipmap/content_icon_zhuanfa"
+                android:transitionName="@string/tu2" />
+
+
+            <!--<ImageView-->
+            <!--android:id="@+id/iv_video_fx"-->
+            <!--android:layout_width="28dp"-->
+            <!--android:layout_height="28dp"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_margin="2dp"-->
+            <!--android:src="@mipmap/pinglun" />-->
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/rl_zan_ping_feng"
+        android:background="@color/dbdbdb" />
+
+
+    <!--<android.support.design.widget.TabLayout-->
+    <!--android:id="@+id/activity_video_details_tablayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/danmaku_player" />-->
+
+    <!--<android.support.v4.view.ViewPager-->
+    <!--android:id="@+id/activity_video_details_viewpager"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@id/activity_video_details_tablayout" />-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_zan_ping_feng"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_pl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="最新评论"
+                android:textSize="15sp" />
+
+            <TextView
+
+                android:id="@+id/tv_video_ping_lun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="2dp"
+                android:text="10" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/fragment_comment_message_bottom_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/fragment_comment_message_emoj_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:src="@mipmap/emoj" />
+
+            <EditText
+                android:id="@+id/fragment_comment_message_edt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/circle_corner_edit"
+                android:drawableLeft="@mipmap/edit"
+                android:gravity="center_vertical"
+                android:hint="说点什么吧~"
+                android:lines="1"
+                android:padding="10dp"
+                android:textColorHint="@color/color9a9a9a"
+                android:textCursorDrawable="@null"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/fragment_comment_message_send_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:padding="9dp"
+                android:text="发表"
+                android:textColor="@color/colorOrigin"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <com.lwd.qjtv.view.EmojiBoard
+            android:id="@+id/input_emoji_board"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>

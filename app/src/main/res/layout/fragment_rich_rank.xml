@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.lwd.qjtv.view.VerticalSwipeRefreshLayout
+            android:id="@+id/activity_rank_swiperefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/activity_rank_one_civ"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@mipmap/video_place_holder" />
+
+                            <TextView
+                                android:id="@+id/activity_rank_one_name_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/activity_rank_one_civ"
+                                android:layout_centerHorizontal="true"
+                                android:text="斯诺克直播"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/activity_rank_one_number_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/activity_rank_one_name_tv"
+                                android:layout_centerHorizontal="true"
+                                android:text="62850"
+                                android:textColor="@color/text_color_red_a"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignEnd="@+id/activity_rank_one_civ"
+                                android:layout_alignRight="@+id/activity_rank_one_civ"
+                                android:layout_centerVertical="true"
+                                android:src="@mipmap/rank_two" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/activity_rank_two_civ"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@mipmap/video_place_holder" />
+
+
+
+                            <TextView
+                                android:id="@+id/activity_rank_two_name_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/activity_rank_two_civ"
+                                android:layout_centerHorizontal="true"
+                                android:text="斯诺克直播"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/activity_rank_two_number_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/activity_rank_two_name_tv"
+                                android:layout_centerHorizontal="true"
+                                android:text="62850"
+                                android:textColor="@color/text_color_red_a"
+                                android:textSize="14sp" />
+                            <ImageView
+                                android:id="@+id/imageView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignEnd="@+id/activity_rank_two_civ"
+                                android:layout_alignRight="@+id/activity_rank_two_civ"
+                                android:layout_centerVertical="true"
+                                android:src="@mipmap/rank_one" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/activity_rank_three_civ"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@mipmap/video_place_holder" />
+
+
+
+                            <TextView
+                                android:id="@+id/activity_rank_three_name_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/activity_rank_three_civ"
+                                android:layout_centerHorizontal="true"
+                                android:text="斯诺克直播"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/activity_rank_three_number_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/activity_rank_three_name_tv"
+                                android:layout_centerHorizontal="true"
+                                android:text="62850"
+                                android:textColor="@color/text_color_red_a"
+                                android:textSize="14sp" />
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignEnd="@+id/activity_rank_three_civ"
+                                android:layout_alignRight="@+id/activity_rank_three_civ"
+                                android:layout_centerVertical="true"
+                                android:src="@mipmap/rank_three" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/activity_rank_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:overScrollMode="never"
+                        android:scrollbars="none" />
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tv_bottom_tishi"
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="只显示最近30天的记录"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </ScrollView>
+        </com.lwd.qjtv.view.VerticalSwipeRefreshLayout>
+
+        <com.lwd.qjtv.view.LoadingPageView
+            android:id="@+id/loading_framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </RelativeLayout>
+</LinearLayout>

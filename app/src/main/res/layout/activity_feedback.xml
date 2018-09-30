@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <!-- 标题 -->
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/include_title"/>
+    <EditText
+        android:id="@+id/activity_feedback_feedback_edt"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="20dp"
+        android:gravity="left|top"
+        android:maxLength="400"
+        android:textCursorDrawable="@null"
+        android:padding="5dp"
+        android:hint="请留下您宝贵的意见与建议~"
+        android:textSize="16sp"
+        android:textColor="@color/color333333"
+        android:textColorHint="@color/color999999"
+        android:background="@drawable/dialog_circle_corner_bg"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/color333333"
+        android:text="为了更好的为您服务，请留下您的联系方式"
+        />
+    <EditText
+        android:id="@+id/activity_feedback_contact_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="手机号、QQ任选其一"
+        android:textCursorDrawable="@null"
+        android:textSize="16sp"
+        android:textColor="@color/color333333"
+        android:textColorHint="@color/color999999"
+        android:background="@drawable/dialog_circle_corner_bg"
+        android:lines="1"
+        android:paddingLeft="10dp"
+        android:maxLength="11"
+        android:inputType="number"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        />
+    <TextView
+        android:id="@+id/activity_feedback_commit_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circle_corner_shape"
+        android:gravity="center"
+        android:text="提交反馈"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+</LinearLayout>

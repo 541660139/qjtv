@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.webber.autorolllayout.DecoratorViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.webber.autorolllayout.DecoratorViewPager>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_info_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="标题"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!--
+                 <View
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/dot" />
+            -->
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <!--小米，oppo，vivo，魅族，华为这几个渠道要打副标(桌球) -->
+    <string name="app_name">羽毛球TV-体育比赛</string>
+    <!--<string name="app_name">羽毛球TV</string>-->
+    <string name="net_less">网络异常</string>
+    <string name="tu">tu</string>
+    <string name="zi">zi</string>
+    <string name="tu1">tu1</string>
+    <string name="tu2">tu2</string>
+
+</resources>

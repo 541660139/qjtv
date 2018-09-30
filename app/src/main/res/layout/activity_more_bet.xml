@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_more_guess_match_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="香港大师赛"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+                android:id="@+id/activity_more_guess_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <RelativeLayout
+                android:id="@+id/activity_more_bet_add_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color999999"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/activity_more_peilv_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="赔率：1"
+                    android:textColor="@color/color0066cd"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="投注"
+                    android:textColor="@color/colorOrigin"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.lwd.qjtv.view.LoadingPageView
+            android:id="@+id/loading_framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

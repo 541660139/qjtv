@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/dbdbdb" />
+
+    <RelativeLayout
+        android:id="@+id/activity_my_bbsmessage_comment_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/activity_my_bbsmessage_comment_civ"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/like_msg" />
+
+        <TextView
+            android:id="@+id/activity_my_bbsmessage_comment_num_tv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignRight="@id/activity_my_bbsmessage_comment_civ"
+            android:background="@drawable/circle_red_text_bg_drawable"
+            android:gravity="center"
+            android:text="15"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/activity_my_bbsmessage_comment_civ"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="评论"
+                android:textColor="@color/color333333"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/activity_my_bbsmessage_comment_content_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="评论"
+                android:textColor="@color/color999999" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/dbdbdb" />
+
+    <RelativeLayout
+        android:id="@+id/activity_my_bbsmessage_like_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/activity_my_bbsmessage_like_civ"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/comment_msg" />
+
+        <TextView
+            android:id="@+id/activity_my_bbsmessage_like_num_tv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignRight="@id/activity_my_bbsmessage_like_civ"
+            android:background="@drawable/circle_red_text_bg_drawable"
+            android:gravity="center"
+            android:text="15"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/activity_my_bbsmessage_like_civ"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="赞"
+                android:textColor="@color/color333333"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/activity_my_bbsmessage_like_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="点赞"
+                android:textColor="@color/color999999" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/dbdbdb" />
+</LinearLayout>

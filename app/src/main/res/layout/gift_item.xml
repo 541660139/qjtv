@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="horizontal"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:id="@+id/ll_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:clipChildren="false">
+
+        <!--<ImageView-->
+        <!--android:id="@+id/civ_photo"-->
+        <!--android:layout_width="45dp"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:src="@land_full_gift_unselect/face" />-->
+
+        <ImageView
+            android:id="@+id/bg"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/gift_bg" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/video_place_holder" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/image"
+            android:layout_toRightOf="@id/image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="啦啦啦"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/gift_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="送给***麻辣烫"
+                android:textColor="@android:color/white"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!--<ImageView-->
+        <!--android:id="@+id/image"-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:src="@mipmap/ic_launcher" />-->
+
+        <com.lwd.qjtv.view.gift.MagicTextView
+            android:id="@+id/gift_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/bg"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/bg"
+            android:layout_toRightOf="@id/bg"
+            android:padding="2dp"
+            android:text="X1"
+            android:textColor="@color/colorOrigin"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:foreground="@color/colorOrigin"
+            app:innerShadowColor="@color/color999999"
+            app:innerShadowDy="2"
+            app:innerShadowRadius="1"
+            app:strokeColor="@color/colorOrigin"
+            app:strokeJoinStyle="miter"
+            app:strokeWidth="2" />
+    </RelativeLayout>
+
+</FrameLayout>

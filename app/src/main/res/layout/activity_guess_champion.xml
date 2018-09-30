@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/include_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_guess_champion_match_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="可投注球员"
+                android:textSize="15sp" />
+
+            <!--<android.support.v4.widget.SwipeRefreshLayout-->
+            <!--android:id="@+id/activity_guess_champion_swiperefresh"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/activity_guess_champion_swiperefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_guess_champion_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+            <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+        </LinearLayout>
+
+        <com.lwd.qjtv.view.LoadingPageView
+            android:id="@+id/loading_framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</LinearLayout>

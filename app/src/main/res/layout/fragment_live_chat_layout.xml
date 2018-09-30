@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fragment_live_chat_gonggao_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/fragment_live_chat_layout_rl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_live_login_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragmetn_live_chat_webview"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:visibility="visible" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_live_chat_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/fragment_live_login_recyclerview"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+
+        <!--<master.flame.danmaku.ui.widget.DanmakuView-->
+        <!--android:id="@+id/fragment_video_details_danmakuview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/text_color_red_a" />-->
+
+        <WebView
+            android:id="@+id/fragmetn_live_chat_webview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <com.lwd.qjtv.view.gift.GiftLayout
+            android:id="@+id/giftView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <!--<ListView-->
+    <!--android:id="@+id/chat_listview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:divider="@null"-->
+    <!--android:listSelector="@android:color/transparent"-->
+    <!--android:scrollbars="none"-->
+    <!--android:transcriptMode="alwaysScroll"/>
+-->
+
+
+    <com.lwd.qjtv.view.GiftView
+        android:id="@+id/input_gift_board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/fragment_comment_message_bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/fragment_live_chat_emoji_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/x15"
+            android:src="@mipmap/emoj" />
+
+        <EditText
+            android:id="@+id/fragment_live_chat_message_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/circle_corner_edit"
+            android:drawableLeft="@mipmap/edit"
+            android:gravity="center_vertical"
+            android:hint="最多输入150个字符"
+            android:imeOptions="actionSend"
+            android:lines="1"
+            android:maxLength="150"
+            android:padding="10dp"
+            android:textColorHint="@color/color9a9a9a"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/fragment_live_chat_recharge_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableTop="@mipmap/live_recharge"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="充值"
+            android:textColor="@color/ff7800"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/fragment_live_chat_gift_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableTop="@mipmap/live_gift"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="礼物"
+            android:textColor="@color/feb22f"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/fragment_live_chat_send_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="发表"
+            android:textColor="@color/colorOrigin"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <com.lwd.qjtv.view.EmojiBoard
+        android:id="@+id/input_emoji_board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</LinearLayout>

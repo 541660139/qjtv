@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<layer-list-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--&lt;!&ndash; 未选中 &ndash;&gt;-->
+    <!--<item-->
+        <!--android:id="@android:id/background"-->
+        <!--android:drawable="@color/black"/>-->
+    <!--&lt;!&ndash; 中 &ndash;&gt;-->
+    <!--<item-->
+        <!--android:id="@android:id/progress"-->
+        <!--android:drawable="@color/colorPrimary"/>-->
+    <!--<item-->
+        <!--android:id="@android:id/secondaryProgress"-->
+        <!--android:drawable="@color/colorAccent"/>-->
+<!--</layer-list>-->
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--&lt;!&ndash;-->
+    <!--由于本人比较懒，就直接用xml代替图片，如果伙伴们有兴趣可以自己做一个progress进度条图片-->
+    <!--注意：叠放顺序依次为background，secondaryProgress，progress-->
+    <!--cilp标签的作用就是跟随进度逐步显示图片，把图片分成N份逐个进度显示,避免在拖动过程中进度不走的情况-->
+    <!--&ndash;&gt;-->
+    <!--&lt;!&ndash;背景进度条&ndash;&gt;-->
+    <!--<item android:id="@android:id/background">-->
+        <!--<shape android:shape="line">-->
+            <!--<stroke android:width="30dp" android:color="#cd272f"/>-->
+            <!--<corners android:radius="5dp"></corners>-->
+        <!--</shape>-->
+    <!--</item>-->
+    <!--&lt;!&ndash;第二进度条&ndash;&gt;-->
+    <!--<item android:id="@android:id/secondaryProgress">-->
+        <!--<clip>-->
+            <!--<shape android:shape="line">-->
+                <!--<stroke android:width="30dp" android:color="#58a8dd"/>-->
+                <!--<corners android:radius="5dp"></corners>-->
+            <!--</shape>-->
+        <!--</clip>-->
+    <!--</item>-->
+    <!--&lt;!&ndash;第一进度条&ndash;&gt;-->
+    <!--<item android:id="@android:id/progress">-->
+        <!--<clip>-->
+            <!--<shape android:shape="line">-->
+                <!--<stroke android:width="30dp" android:color="#cd272f"/>-->
+                <!--<corners android:radius="5dp"></corners>-->
+            <!--</shape>-->
+        <!--</clip>-->
+    <!--</item>-->
+<!--</layer-list>-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@android:id/background">
+
+        <shape>
+
+            <corners android:radius="2dp" />
+
+            <stroke android:width="15dp" android:color="#cd272f"/>
+        </shape>
+    </item>
+
+    <item android:id="@android:id/secondaryProgress">
+
+        <clip>
+
+            <shape >
+
+                <corners android:radius="2dp" />
+
+                <stroke android:width="15dp" android:color="#58a8dd"/>
+            </shape>
+        </clip>
+    </item>
+
+    <item android:id="@android:id/progress">
+
+        <clip>
+
+            <shape >
+
+                <corners android:radius="2dp" />
+
+                <stroke android:width="15dp" android:color="#58a8dd"/>
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:luckpan="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/dialog_luckpan_award_pool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/award_pool"
+            android:gravity="right|center_vertical"
+            android:maxLength="8"
+            android:paddingRight="15dp"
+            android:text="99999999"
+            android:textColor="@color/colorfcffc9"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/dialog_luckpan_finish_iv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:src="@mipmap/x" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+    <com.lwd.qjtv.view.luckypan.LuckPanLayout
+        android:id="@+id/luckpan_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent">
+
+        <com.lwd.qjtv.view.luckypan.RotatePan
+            android:id="@+id/rotatePan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            luckpan:icons="@array/icons"
+            luckpan:names="@array/names"
+            luckpan:pannum="8" />
+        <ImageView
+            android:id="@+id/go"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:clickable="true"
+            android:onClick="rotation"
+            android:src="@mipmap/go"
+            android:tag="startbtn" />
+
+    </com.lwd.qjtv.view.luckypan.LuckPanLayout>
+        <TextView
+            android:id="@+id/lucky_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="50积分"
+            android:paddingTop="25dp"
+            android:textSize="13sp"
+            />
+    </RelativeLayout>
+</LinearLayout>

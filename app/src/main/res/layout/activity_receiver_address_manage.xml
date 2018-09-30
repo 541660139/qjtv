@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title" />
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/none_datas_rl"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="#F6F6F6"-->
+    <!--android:visibility="gone"-->
+    <!--&gt;-->
+    <!--<ImageView-->
+    <!--android:id="@+id/none_datas_image_view"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:background="@drawable/shibai"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/none_datas_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="当前没有收货地址"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:textColor="@color/light_gray_text_color"-->
+    <!--android:layout_below="@id/none_datas_image_view"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="快去添加收货地址吧~"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:textColor="@color/light_gray_text_color"-->
+    <!--android:layout_below="@id/none_datas_tv"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--/>-->
+    <!--</RelativeLayout>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+                android:id="@+id/receiver_address_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="75dp"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+
+        </LinearLayout>
+
+        <com.lwd.qjtv.view.LoadingPageView
+            android:id="@+id/loading_framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/receiver_address_add_tv"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/circle_corner_shape"
+            android:gravity="center"
+            android:text="+ 新建地址"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</LinearLayout>

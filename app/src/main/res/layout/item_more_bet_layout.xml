@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/item_more_bet_left_civ"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/video_place_holder" />
+
+                <TextView
+                    android:id="@+id/item_more_bet_left_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:ellipsize="end"
+                    android:maxLength="4"
+                    android:text="塞尔比"
+                    android:textColor="@color/color333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_more_bet_match_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:text="8进4"
+                    android:textColor="@color/color999999"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/item_more_bet_jc_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:text="胜"
+                    android:textColor="@color/colorOrigin"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/item_more_bet_jc_peilv_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="2dp"
+                    android:text="赔率：1.83"
+                    android:textColor="@color/color0066cd"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/item_more_bet_right_civ"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/video_place_holder" />
+
+            <TextView
+                android:id="@+id/item_more_bet_right_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:ellipsize="end"
+                android:maxLength="4"
+                android:text="塞尔比"
+                android:textColor="@color/color333333"
+                android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <CheckBox
+                android:id="@+id/item_more_bet_check_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/address_receiver_rb_selector"
+                android:button="@null"
+                android:checked="true" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/color999999" />
+
+    <TextView
+        android:id="@+id/item_more_bet_tip_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="向左滑动可删除"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</LinearLayout>

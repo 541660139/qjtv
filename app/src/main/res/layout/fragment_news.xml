@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--标题栏
+            设置的layout_scrollFlags有如下几种选项：
+            scroll: 所有想滚动出屏幕的view都需要设置这个flag-没有设置这个flag的view将被固定在屏幕顶部。
+            enterAlways: 这个flag让任意向下的滚动都会导致该view变为可见,启用快速“返回模式”。
+            enterAlwaysCollapsed: 当你的视图已经设置minHeight属性又使用此标志时，
+                                  你的视图只能以最小高度进入，只有当滚动视图到达顶部时才扩大到完整高度。
+            exitUntilCollapsed: 滚动退出屏幕，最后折叠在顶端。-->
+
+            <com.jude.rollviewpager.RollPagerView
+                android:id="@+id/rpv_homepage_banner"
+                android:layout_width="match_parent"
+                android:layout_height="359px"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed" />
+            <!--选项卡-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/tl_news"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/colorPrimaryDark"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                app:tl_indicator_color="@color/blue_main"
+                app:tl_indicator_height="3dp"
+                app:tl_indicator_width="30dp"
+                app:tl_tab_space_equal="true"
+                app:tl_textSelectColor="@color/white"
+                app:tl_textUnselectColor="#87889A"
+                app:tl_textsize="19sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@color/colorPrimaryDark" />
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v4.view.ViewPager
+
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"></android.support.v4.view.ViewPager>
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <com.lwd.qjtv.view.LoadingPageView
+        android:id="@+id/loading_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.lwd.qjtv.view.DragFloatActionButton
+        android:id="@+id/circle_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:src="@mipmap/shequ_icon_fabu" />
+</RelativeLayout>

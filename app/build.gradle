@@ -1,0 +1,172 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    useLibrary 'org.apache.http.legacy'
+
+    greendao {
+        schemaVersion 1 //数据库版本号
+        daoPackage 'com.usher.greendao_demo.greendao.gen' //自动生成的工具类的包名
+        targetGenDir 'src/main/java' //路径
+    }
+
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "com.lwd.qjtv"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
+        multiDexEnabled true
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a'/*,'arm64-v8a'*/
+
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "a0c7d91f4f34bdba4b12fdc5", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    signingConfigs {
+        debug {
+            keyAlias 'android.keystore'
+            keyPassword 'android'
+            storeFile file('E:/WorkSpaese/snooker/android.keystore')
+            storePassword 'android'
+        }
+    }
+    buildTypes {
+
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled true
+//            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles 'proguard-rules.pro'
+        }
+    }
+
+//    sourceSets{
+//        main(){
+//            jniLibs.srcDir = ['libs']
+//        }
+//    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        abortOnError false
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    buildToolsVersion '26.0.2'
+}
+
+
+
+
+buildscript {
+    repositories {
+        jcenter()
+//        mavenCentral()
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //tools
+    provided rootProject.ext.dependencies["javax.annotation"]
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+    //view
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    compile rootProject.ext.dependencies["paginate"]
+    compile rootProject.ext.dependencies["umeng-analytics"]
+    compile rootProject.ext.dependencies["circleimageview"]
+    //    compile rootProject.ext.dependencies["wechat-pay"]
+    compile rootProject.ext.dependencies["ndkbitmap"]
+    //    compile rootProject.ext.dependencies["gsyvideoplayer"]
+    compile rootProject.ext.dependencies["danmaku-flame-master"]
+    //arms
+    compile project(':arms')
+    //    compile project(':AutoRollLayout')
+    //    compile 'me.jessyan:arms:2.0.1'
+    //test
+    testCompile rootProject.ext.dependencies["junit"]
+    debugCompile rootProject.ext.dependencies["canary-debug"]
+    releaseCompile rootProject.ext.dependencies["canary-release"]
+    testCompile rootProject.ext.dependencies["canary-release"]
+    compile project(':AutoRollLayout')
+    compile project(':IMLib')
+    compile 'com.github.ctiao:ndkbitmap-armv5:0.8.3'
+    compile 'com.github.ctiao:ndkbitmap-x86:0.8.3'
+    compile(name: 'videoparsesdk-1.0.0-release', ext: 'aar')
+    compile(name: 'siteparser', ext: 'aar')
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'org.greenrobot:greendao:3.2.2'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
+    compile 'com.github.XunMengWinter:CircularAnim:0.3.3'
+    compile 'cn.jiguang.sdk:jpush:3.1.5'
+    compile 'cn.jiguang.sdk:janalytics:1.2.1'
+    compile 'cn.jiguang.sdk:jmessage:2.6.1'
+    // 此处以JMessage 2.7.0 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.2.3'
+    // 此处以JCore 1.2.3 版本为例。
+    // add library
+    //    compile(name: 'videoparsesdk-dianzhi-release', ext: 'aar')
+    //    compile(name: 'videoparsesdk-release', ext: 'aar')
+    //    compile(name: 'DroidPlugin-release', ext: 'aar')
+    //    compile 'com.mcxiaoke.volley:library:1.0.19'
+    //    compile 'com.google.code.gson:gson:2.3.1'
+    //ijk
+    //    //    # required, enough for most devices.
+    //        compile 'tv.danmaku.ijk.media:ijkplayer-java:0.7.9'
+    //        compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.7.9'
+    //    //    # Other ABIs: optional
+    //        compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.7.9'
+    //    //    compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.7.9'
+    //        compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.7.9'
+    //
+    //    //    compile 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.7.9'
+    //    //    # ExoPlayer as IMediaPlayer: optional, experimental
+    //          compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.7.9'
+    compile project(path: ':provider7')
+    compile project(path: ':gsyVideoPlayer')
+    compile 'com.daimajia.numberprogressbar:library:1.4@aar'
+    compile 'com.yanzhenjie:recyclerview-swipe:1.1.2'
+    //    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    compile project(':FlycoTabLayout_Lib')
+    compile 'com.jude:rollviewpager:1.4.6'
+    //    compile 'cn.jzvd:jiaozivideoplayer:6.3.1'
+}

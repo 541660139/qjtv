@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--首页标题-->
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@mipmap/back"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="商城"
+            android:textColor="@color/color666666"
+            android:textSize="19dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/fragment_mall_search_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_alignParentRight="true"
+            android:text="管理"
+            android:textColor="@color/color666666"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            />
+    </com.zhy.autolayout.AutoRelativeLayout>
+    <include
+        android:id="@+id/recyclerView_layout"
+        layout="@layout/layout_recyclerview"
+        />
+</LinearLayout>

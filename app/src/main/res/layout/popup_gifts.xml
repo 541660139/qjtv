@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="送给："
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/popup_gifts_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:lines="1"
+            android:text="斯诺克"
+            android:textColor="@color/colorOrigin"
+            android:textColorLink="@color/colorOrigin"
+            android:textCursorDrawable="@null"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="数量："
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/popup_gifts_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:ellipsize="end"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="2"
+            android:text="1"
+            android:textColor="@color/colorOrigin"
+            android:textColorLink="@color/colorOrigin"
+            android:textCursorDrawable="@null"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:paddingEnd="8dp"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:text="充值"
+            android:textColor="@color/color999999"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/popup_gifts_close_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@mipmap/quit" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="#dcdcdc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/recharge_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/circle_corner_address"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="充值"
+            android:textColor="@color/colorOrigin"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:text="积分"
+            android:textColor="@color/color686868"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/popup_gifts_coin_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="0"
+            android:textColor="@color/colorOrigin"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <LinearLayout
+            android:id="@+id/popup_isopen_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+        <CheckBox
+            android:id="@+id/popup_gifts_cb"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:padding="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/gift_isopen_selector"
+            android:button="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:text="不公开"
+            android:textColor="@color/color989898"
+            android:textSize="15sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="56dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/circle_corner_shape"
+            android:gravity="center"
+            android:text="赠送"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="#dcdcdc" />
+    <!--<android.support.v4.view.ViewPager-->
+    <!--android:id="@+id/view_pager"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="200dp"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layout_marginRight="15dp"-->
+    <!--android:layout_marginTop="5dp"/>-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="#dcdcdc" />
+
+    <LinearLayout
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" />
+
+</LinearLayout>

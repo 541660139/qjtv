@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="赛事"
+            android:textColor="@color/color666666"
+            android:textSize="19dp" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+
+            android:src="@mipmap/more_h5" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/color999999" />
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/slidingtablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="4dp"
+        android:visibility="gone"
+        tl:tl_indicator_color="@android:color/holo_red_dark"
+        tl:tl_indicator_width="16dp"
+        tl:tl_textSelectColor="@android:color/holo_red_dark"
+        tl:tl_textUnselectColor="#1E1E1E" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fragment_comment_message_layout_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="最新评论"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/fragment_comment_message_bottom_ll"
+        android:layout_below="@id/fragment_comment_message_layout_tv"
+        android:layout_weight="1">
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        <TextView
+            android:id="@+id/fragment_comment_message_tip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="来个评论吧~"
+            android:visibility="gone"
+            android:textSize="16sp"
+            />
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/fragment_comment_message_bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/fragment_comment_message_emoj_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:src="@mipmap/emoj" />
+
+        <EditText
+            android:id="@+id/fragment_comment_message_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/circle_corner_edit"
+            android:drawableLeft="@mipmap/edit"
+            android:gravity="center_vertical"
+            android:hint="说点什么吧~"
+            android:lines="1"
+            android:padding="10dp"
+            android:textColorHint="@color/color9a9a9a"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/fragment_comment_message_send_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:padding="9dp"
+            android:text="发表"
+            android:textColor="@color/colorOrigin"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <com.lwd.qjtv.view.EmojiBoard
+        android:id="@+id/input_emoji_board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</LinearLayout>

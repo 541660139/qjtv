@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="vertical">
+                    <!-- 比赛信息 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/activity_guess_details_left_head_civ"
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:src="@mipmap/video_place_holder" />
+
+                            <TextView
+                                android:id="@+id/activity_guess_details_left_name_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="塞尔比"
+                                android:textColor="@color/color333333"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/y27"
+                                android:text="VS"
+                                android:textColor="@color/color333333"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/activity_guess_details_time_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/y25"
+                                android:gravity="center_horizontal"
+                                android:text="5月4日 16:30"
+                                android:textColor="@color/color999999"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/activity_guess_details_right_head_civ"
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:src="@mipmap/video_place_holder" />
+
+                            <TextView
+                                android:id="@+id/activity_guess_details_right_name_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="塞尔比"
+                                android:textColor="@color/color333333"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"
+                        android:background="@color/color999999" />
+
+                    <!-- 历史数据 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="历史交手记录"
+                        android:textColor="@color/color333333"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:padding="10dp">
+
+                        <ProgressBar
+                            android:id="@+id/fragment_live_guess_battle_pb"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:max="100"
+                            android:progress="50"
+                            android:progressDrawable="@drawable/battle_progressbar" />
+
+                        <TextView
+                            android:id="@+id/fragment_live_guess_left_rate_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="50%(0胜)"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/fragment_live_guess_right_rate_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:text="50%(0胜)"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"
+                        android:background="@color/color999999" />
+
+                    <!-- 标准胜负 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="标准胜负"
+                        android:textColor="@color/color666666"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <com.lwd.qjtv.view.RaceView
+                                android:id="@+id/activity_guess_details_left_win_rv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <CheckBox
+                                android:id="@+id/fragment_live_guess_left_cb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/address_receiver_rb_selector"
+                                android:button="@null"
+                                android:checked="false"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <com.lwd.qjtv.view.RaceView
+                                android:id="@+id/activity_guess_details_right_win_rv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <CheckBox
+                                android:id="@+id/fragment_live_guess_right_cb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/address_receiver_rb_selector"
+                                android:button="@null"
+                                android:checked="false"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<com.vid.snooker.view.RaceView-->
+                    <!--android:id="@+id/activity_guess_details_left_win_rv"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1" />-->
+
+                    <!--<com.vid.snooker.view.RaceView-->
+                    <!--android:id="@+id/activity_guess_details_right_win_rv"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1" />-->
+                    <!--</LinearLayout>-->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"
+                        android:background="@color/color999999" />
+
+                    <!-- 局数 -->
+                    <TextView
+                        android:id="@+id/activity_guess_details_game_num_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="局数"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/activity_guess_details_number_recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:overScrollMode="never"
+                            android:scrollbars="none" />
+
+                        <!--<com.vid.snooker.view.RaceView-->
+                        <!--android:id="@+id/activity_guess_details_small_number_rv"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="@dimen/y90"-->
+                        <!--android:layout_weight="1" />-->
+
+                        <!--<com.vid.snooker.view.RaceView-->
+                        <!--android:id="@+id/activity_guess_details_middle_number_rv"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="@dimen/y90"-->
+                        <!--android:layout_weight="1" />-->
+
+                        <!--<com.vid.snooker.view.RaceView-->
+                        <!--android:id="@+id/activity_guess_details_big_number_rv"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="@dimen/y90"-->
+                        <!--android:layout_weight="1" />-->
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"
+                        android:background="@color/color999999" />
+
+                    <!-- 让分 -->
+                    <TextView
+                        android:id="@+id/activity_guess_details_rangfen_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="让分"
+                        android:textSize="16sp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/fragment_live_guess_rangfen_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:overScrollMode="never"
+                        android:scrollbars="none" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"
+                        android:background="@color/color999999" />
+
+                    <!-- 比分 -->
+                    <TextView
+                        android:id="@+id/activity_guess_details_score_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="比分"
+                        android:textSize="16sp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/fragment_live_guess_score_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:overScrollMode="never"
+                        android:scrollbars="none" />
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/activity_guess_details_more_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrigin"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="切换至多选模式"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/activity_guess_details_more_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrigin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/activity_guess_details_back_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorOrigin"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="切换至单选模式"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="0.1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/activity_guess_details_charge_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorOrigin"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="多选车"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.lwd.qjtv.view.LoadingPageView
+            android:id="@+id/loading_framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor_activity"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/include_title" />
+
+    <include
+        android:id="@+id/loading_layout"
+        layout="@layout/loading_anim"
+        android:visibility="gone" />
+    <!-- 广告 -->
+    <ImageView
+        android:id="@+id/activity_recharge_adv_iv"
+        android:layout_width="match_parent"
+        android:layout_height="132dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/adv"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="积分:"
+                android:textColor="@color/color666666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/activity_recharge_own_money_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="0"
+                android:textColor="@color/text_color_red_a"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textSize="15sp"
+            android:text="仅供娱乐、严禁赌博"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <!-- 账户余额 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:paddingLeft="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账户余额"
+                android:textColor="#AFAFAF"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/activity_recharge_account_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="薯片"
+                android:textColor="@color/black"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#EAEAEA" />
+        <!-- 支付方式 -->
+        <LinearLayout
+            android:id="@+id/activity_recharge_pay_way_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:paddingLeft="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付方式"
+                android:textColor="#AFAFAF"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:id="@+id/activity_recharge_pay_way_iv"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/wechatpay"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/activity_recharge_pay_way_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="微信支付"
+                    android:textColor="@color/black"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="充值比例"
+                    android:textColor="#AFAFAF"
+                    android:textSize="13dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/xl" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#EAEAEA" />
+        <!-- 充值金额 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="请选择积分充值数量:"
+                android:textColor="#AFAFAF"
+                android:textSize="14sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/activity_recharge_money_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="beforeDescendants"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="可获得"
+                    android:textColor="#AFAFAF"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/activity_recharge_award_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="500"
+                    android:textColor="@color/black"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="积分"
+                    android:textColor="#AFAFAF"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/activity_recharge_exp_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="50"
+                    android:textColor="#AFAFAF"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="经验"
+                    android:textColor="#AFAFAF"
+                    android:textSize="13dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/f3f3f3"
+            android:padding="5dp"
+            android:text="请选择支付方式"
+            android:textColor="@color/color666666"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/recharge_window_alipay_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@mipmap/alipay" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="支付宝（推荐）"
+                    android:textColor="@color/color666666"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="推荐有支付宝账号的用户使用"
+                    android:textColor="#AFAFAF"
+                    android:textSize="13dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/recharge_alipay_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/address_receiver_rb_selector"
+                android:button="@null" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#d8d8d8" />
+        <LinearLayout
+            android:id="@+id/recharge_window_wechat_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@mipmap/wechat_pay" />
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="微信支付"
+                    android:textColor="@color/color666666"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="推荐安装微信5.0以上版本的用户使用"
+                    android:textColor="#AFAFAF"
+                    android:textSize="13dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/recharge_wechat_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/address_receiver_rb_selector"
+                android:button="@null" />
+        </LinearLayout>
+
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#d8d8d8" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_recharge_pay_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/circle_corner_shape"
+        android:gravity="center"
+        android:text="立即支付"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+</LinearLayout>

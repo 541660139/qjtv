@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!--首页标题-->
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/activity_push_community_back_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/go_back"
+            android:gravity="center_vertical"
+            android:text="返回" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="讨论区"
+            android:textColor="@color/color666666"
+            android:textSize="19dp" />
+
+        <TextView
+            android:id="@+id/activity_push_community_push_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="发布"
+            android:textColor="@color/color666666"
+            android:textSize="19dp" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dbdbdb" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <EditText
+                android:id="@+id/activity_push_community_title_edt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="输入标题"
+                android:lines="1"
+                android:maxLength="30" />
+
+            <TextView
+                android:id="@+id/activity_push_community_text_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/30" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/color999999" />
+
+        <EditText
+            android:id="@+id/activity_push_community_content_edt"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="输入话题内容\n\n-友好讨论，请勿骂人\n-优质话题会被加精哦\n-禁止恶意刷帖\n-不符合标题格式的帖子会被杀删哦\n" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/activity_push_community_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/activity_push_community_num_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:text="0/4"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

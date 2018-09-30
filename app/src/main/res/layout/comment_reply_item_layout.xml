@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:background="#F6F6F6"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/reply_item_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="沐风:"
+            android:textColor="#228fff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/reply_item_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 回复 "
+            android:textColor="@color/color808080"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/reply_item_touser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="沐风:"
+            android:textColor="#228fff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/reply_item_touser_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textColor="@color/color808080"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/reply_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="10"
+            android:paddingLeft="4dp"
+            android:paddingRight="8dp"
+            android:text="世上本没有路，走的人多了，也就成了路"
+            android:textColor="#949494"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

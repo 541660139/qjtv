@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/money_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:text="10元"
+        android:textColor="@color/color666666"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:background="@drawable/recharge_item_bg"
+        />
+    <EditText
+        android:id="@+id/money_edt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:text="10元"
+        android:textCursorDrawable="@null"
+        android:textColor="@color/color333333"
+        android:textColorHint="@color/color999999"
+        android:focusable="true"
+        android:enabled="true"
+        android:lines="1"
+        android:ellipsize="end"
+        android:maxLength="5"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:inputType="number"
+        android:hint="其他金额"
+        android:background="@drawable/recharge_item_bg"
+        />
+
+</LinearLayout>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    android:orientation="vertical">
+
+
+    <!-- 标题 -->
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/include_title" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:text="验证码已经发送到  13688888888"
+        android:textColor="#EE9686"
+        android:textSize="12dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:text="密码需要同时包含数字和字母,长度不小于6位"
+        android:textColor="#868686"
+        android:textSize="12dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="手机号码"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/activity_register_phone_edt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入11位手机号"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textColorHint="@color/dbdbdb"
+                android:textCursorDrawable="@null"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/activity_register_send_code_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:text="获取验证码"
+                android:textColor="@color/colorOrigin"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#EBEBEB" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="验证码"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/activity_register_code_edt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:inputType="phone"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textColorHint="@color/dbdbdb"
+                android:textCursorDrawable="@null"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#EBEBEB" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="设置密码"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/activity_register_password_edt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:digits="1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:hint="6~12位数字或字母"
+                android:inputType="textPassword"
+                android:maxLength="14"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textColorHint="@color/dbdbdb"
+                android:textCursorDrawable="@null"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/activity_register_show_pwd_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="设置密码："
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/activity_register_confirm_password_edt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:digits="1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:hint="确认密码(6-14位)"
+                android:inputType="textPassword"
+                android:maxLength="14"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColorHint="@color/dbdbdb"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/activity_register_show_confirm_pwd_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#EBEBEB" />
+
+        <LinearLayout
+            android:id="@+id/activity_register_yaoqing_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="邀请码"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/activity_register_yaoqing_edt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="可不填"
+                android:inputType="phone"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textColorHint="@color/dbdbdb"
+                android:textCursorDrawable="@null"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/activity_register_register_tv"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/dialog_circle_corner_login_bg"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="注册"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+
+    <LinearLayout
+        android:id="@+id/activity_register_intro_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/activity_register_agree_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/address_receiver_rb_selector"
+            android:button="@null"
+            android:checked="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册即表示同意"
+            android:textColor="#3d3d3d"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《羽毛球TV协议》"
+            android:textColor="#59afe2"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

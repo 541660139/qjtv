@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="0.1dp"
+    android:orientation="vertical"
+   >
+
+    <View
+        android:layout_marginLeft="10dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dbdbdb"
+        />
+
+    <ImageView
+        android:id="@+id/item_community_my_bbs_iv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/video_place_holder"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:id="@+id/item_community_my_bbs_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/item_community_my_bbs_iv"
+        android:layout_alignTop="@id/item_community_my_bbs_iv"
+        android:layout_toRightOf="@id/item_community_my_bbs_iv"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_community_my_bbs_title_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="我们都爱斯诺克"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/item_community_my_bbs_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="1小时前"
+                android:textColor="@color/color666666" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_community_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/item_community_iv"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="我们都爱斯诺克" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jess.arms.widget.autolayout.AutoToolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="120px"
+    android:background="@color/white"
+    app:contentInsetStart="0dp">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/toolbar_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="left">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:src="@mipmap/go_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/back_iv"
+            android:text="返回"
+            android:textSize="18sp"
+            android:textColor="@color/color333333"
+            />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="球球"
+        android:textColor="#fff"
+        android:textSize="18dp" />
+
+</com.jess.arms.widget.autolayout.AutoToolbar>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!-- 标题 -->
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/include_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/f3f3f3"
+                android:padding="10dp"
+                android:text="投注记录"
+                android:textColor="@color/color999999"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="17dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:text="总场次"
+                        android:textColor="@color/color999999"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/activity_my_guess_all_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        android:textColor="@color/color333333"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@color/f3f3f3" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:text="胜场"
+                        android:textColor="@color/color999999"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/activity_my_guess_win_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        android:textColor="@color/color333333"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@color/f3f3f3" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@color/f3f3f3" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:text="败场"
+                        android:textColor="@color/color999999"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/activity_my_guess_fail_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        android:textColor="@color/color333333"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:text="胜率"
+                        android:textColor="@color/color999999"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/activity_my_guess_win_rate_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center_horizontal"
+                        android:text="0%"
+                        android:textColor="@color/color333333"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@color/f3f3f3" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:text="盈亏"
+                        android:textColor="@color/color999999"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/activity_my_guess_money_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center_horizontal"
+                        android:text="0"
+                        android:textColor="@color/color333333"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/activity_my_guess_single_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:drawableTop="@mipmap/guess_single"
+                    android:gravity="center_horizontal"
+                    android:text="单选"
+                    android:background="@color/colorf6f5f5"
+                    android:textColor="@color/color333333"
+                    android:textSize="16sp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/activity_my_guess_champion_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/guess_champion"
+                    android:gravity="center_horizontal"
+                    android:text="冠军"
+                    android:padding="10dp"
+                    android:textColor="@color/color333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/activity_my_guess_more_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/guess_more"
+                    android:gravity="center_horizontal"
+                    android:text="多选"
+                    android:padding="10dp"
+                    android:textColor="@color/color333333"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/f3f3f3"
+                android:padding="10dp"
+                android:text="投注详情"
+                android:textColor="@color/color999999"
+                android:textSize="16sp" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activiy_my_guess_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <!--<include-->
+                <!--android:id="@+id/recyclerView_layout"-->
+                <!--layout="@layout/layout_recyclerview" />-->
+            <TextView
+
+                android:id="@+id/tv_bottom_tishi"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:text="只显示最近30天的记录"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <com.lwd.qjtv.view.LoadingPageView
+            android:id="@+id/loading_framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

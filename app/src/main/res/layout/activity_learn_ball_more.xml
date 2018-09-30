@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--首页标题-->
+    <include layout="@layout/include_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dbdbdb" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/zq_refreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/f3f3f3" />
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/fragment_learn_ball_pobai_title_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/fragment_learn_ball_pobai_iv"
+                            android:text="单杆破百"
+                            android:textColor="@color/color333333"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/fragment_learn_ball_pobai_more_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:text="更多>"
+                            android:textColor="@color/color999999"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/fragment_learn_ball_pobai_iv"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignBottom="@+id/fragment_learn_ball_pobai_more_tv"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/video_place_holder" />
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <com.lwd.qjtv.view.WatchBallItemViewLearnBall
+                                android:id="@+id/fragment_learn_ball_pobai_one_wbiv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <com.lwd.qjtv.view.WatchBallItemViewLearnBall
+                                android:id="@+id/fragment_learn_ball_pobai_two_wbiv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <com.lwd.qjtv.view.WatchBallItemViewLearnBall
+                                android:id="@+id/fragment_learn_ball_pobai_three_wbiv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <com.lwd.qjtv.view.WatchBallItemViewLearnBall
+                                android:id="@+id/fragment_learn_ball_pobai_four_wbiv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:visibility="gone"
+                        android:background="@color/f3f3f3" />
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:visibility="gone"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/fragment_learn_ball_push_iv"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignBottom="@+id/fragment_learn_ball_push_title_tv"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/video_place_holder" />
+
+                        <TextView
+                            android:id="@+id/fragment_learn_ball_push_title_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/fragment_learn_ball_push_iv"
+                            android:text="小编推荐"
+                            android:textColor="@color/color333333"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/fragment_learn_ball_push_more_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:text="更多>"
+                            android:textColor="@color/color999999"
+                            android:textSize="15sp" />
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <com.lwd.qjtv.view.WatchBallItemViewLearnBall
+                                android:id="@+id/fragment_learn_ball_push_one_wbiv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <com.lwd.qjtv.view.WatchBallItemViewLearnBall
+                                android:id="@+id/fragment_learn_ball_push_two_wbiv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <com.lwd.qjtv.view.WatchBallItemViewLearnBall
+                                android:id="@+id/fragment_learn_ball_push_three_wbiv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <com.lwd.qjtv.view.WatchBallItemViewLearnBall
+                                android:id="@+id/fragment_learn_ball_push_four_wbiv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/f3f3f3" />
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/fragment_learn_ball_teach_title_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/fragment_learn_ball_teach_iv"
+                            android:text="大师教学"
+                            android:textColor="@color/color333333"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/fragment_learn_ball_teach_more_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:text="更多>"
+                            android:textColor="@color/color999999"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/fragment_learn_ball_teach_iv"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignBottom="@+id/fragment_learn_ball_teach_more_tv"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/video_place_holder" />
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <com.lwd.qjtv.view.WatchBallItemViewLearnBall
+                                android:id="@+id/fragment_learn_ball_teach_one_wbiv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <com.lwd.qjtv.view.WatchBallItemViewLearnBall
+                                android:id="@+id/fragment_learn_ball_teach_two_wbiv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <com.lwd.qjtv.view.WatchBallItemViewLearnBall
+                                android:id="@+id/fragment_learn_ball_teach_three_wbiv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <com.lwd.qjtv.view.WatchBallItemViewLearnBall
+                                android:id="@+id/fragment_learn_ball_teach_four_wbiv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:background="@color/f3f3f3" />
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/fragment_learn_ball_video_iv"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignBottom="@+id/fragment_learn_ball_video_title_tv"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/video_place_holder" />
+
+                        <TextView
+                            android:id="@+id/fragment_learn_ball_video_title_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/fragment_learn_ball_video_iv"
+                            android:text="系列视频"
+                            android:textColor="@color/color333333"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/fragment_learn_ball_video_more_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:text="更多>"
+                            android:textColor="@color/color999999"
+                            android:textSize="15sp" />
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <com.lwd.qjtv.view.WatchBallItemViewLearnBall
+                                android:id="@+id/fragment_learn_ball_video_one_wbiv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <com.lwd.qjtv.view.WatchBallItemViewLearnBall
+                                android:id="@+id/fragment_learn_ball_video_two_wbiv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <com.lwd.qjtv.view.WatchBallItemViewLearnBall
+                                android:id="@+id/fragment_learn_ball_video_three_wbiv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <com.lwd.qjtv.view.WatchBallItemViewLearnBall
+                                android:id="@+id/fragment_learn_ball_video_four_wbiv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <com.lwd.qjtv.view.LoadingPageView
+            android:id="@+id/loading_framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

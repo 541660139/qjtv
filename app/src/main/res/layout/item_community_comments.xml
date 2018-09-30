@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_avater"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <RelativeLayout
+            android:id="@+id/rl_name"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/iv_avater"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="李毅吧"
+                android:textColor="#228fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="1楼"
+                android:textColor="@color/color808080"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_rank"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="2017-08-11"
+                android:textColor="@color/color808080"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_status"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/item_my_comment_item_like_iv"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="回复"
+                android:textColor="@color/color808080"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/item_my_comment_item_like_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/item_my_comment_item_see_tv"
+                android:scaleType="fitXY"
+                android:src="@mipmap/content_comment"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/item_my_comment_item_see_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="21"
+                android:textColor="@color/color808080"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="8dp"
+        android:text="打的什么鬼玩意"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/childrecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_whatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="查看更多回复"
+        android:textColor="#228fff" />
+
+</LinearLayout>

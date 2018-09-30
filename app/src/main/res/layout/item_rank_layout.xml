@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/item_rank_num_iv"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:src="@mipmap/placeholder"-->
+            <!--android:layout_margin="10dp"-->
+            <!--/>-->
+        <TextView
+            android:id="@+id/item_rank_n_tv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:textSize="14sp"
+            android:textColor="@color/color999999"
+            />
+
+        <com.lwd.qjtv.view.RoundImageView
+            android:id="@+id/item_rank_avater_riv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:src="@mipmap/video_place_holder" />
+        <TextView
+            android:id="@+id/item_rank_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="爱唱歌的丫丫"
+            android:textSize="14sp"
+            android:textColor="@color/color999999"
+            android:layout_marginLeft="5dp"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"/>
+        <TextView
+            android:id="@+id/item_rank_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3200005"
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:textColor="@color/text_color_red_a"
+            android:layout_marginLeft="5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="积分"
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:textColor="@color/text_color_red_a"
+            android:layout_marginLeft="5dp"
+            />
+    </LinearLayout>
+</LinearLayout>

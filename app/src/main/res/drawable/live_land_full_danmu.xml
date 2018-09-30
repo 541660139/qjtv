@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/h_tan_mu_on" android:state_checked="true"/>
+    <item android:drawable="@mipmap/h_tan" android:state_checked="false"/>
+</selector>

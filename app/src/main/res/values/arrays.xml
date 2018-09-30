@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="names">
+        <item>积分20</item>
+        <item>经验50</item>
+        <item>积分50</item>
+        <item>经验100</item>
+        <item>积分200</item>
+        <item>积分10000</item>
+        <item>奖池30%</item>
+        <item>iphoneX</item>
+        <!--<item>实物</item>-->
+        <!--<item>终极大奖</item>-->
+        <!--<item>经验</item>-->
+        <!--<item>金币</item>-->
+
+    </string-array>
+
+    <string-array name="normal_names">
+        <item>经验20</item>
+        <item>积分10</item>
+        <item>经验100</item>
+        <item>积分100</item>
+        <item>经验200</item>
+        <item>积分1000</item>
+        <item>经验1000</item>
+        <item>积分10000</item>
+        <!--<item>实物</item>-->
+        <!--<item>终极大奖</item>-->
+        <!--<item>经验</item>-->
+        <!--<item>金币</item>-->
+
+    </string-array>
+
+    <string-array name="icons">
+        <item>lucky_four</item>
+        <item>lucky_three</item>
+        <item>lucky_four</item>
+        <item>lucky_three</item>
+        <item>lucky_four</item>
+        <item>lucky_two</item>
+        <item>pool</item>
+        <item>iphonex</item>
+    </string-array>
+
+    <string-array name="normal_icons">
+        <item>lucky_three</item>
+        <item>lucky_four</item>
+        <item>lucky_three</item>
+        <item>lucky_four</item>
+        <item>lucky_three</item>
+        <item>lucky_four</item>
+        <item>lucky_three</item>
+        <item>lucky_two</item>
+    </string-array>
+
+</resources>

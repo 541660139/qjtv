@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/item_my_like_item_avater_one_civ"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:src="@mipmap/video_place_holder" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/item_my_like_item_avater_two_civ"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:src="@mipmap/video_place_holder" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/item_my_like_item_avater_three_civ"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:src="@mipmap/video_place_holder" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/item_my_like_item_avater_four_civ"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:src="@mipmap/video_place_holder" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/item_my_like_item_avater_more_civ"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:src="@mipmap/more_avater" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_my_like_item_msg_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="大壮壮一等2位用户赞了你的帖子"
+        android:textColor="@color/color666666" />
+
+    <TextView
+        android:id="@+id/item_my_like_item_time_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="1小时前"
+        android:textColor="@color/color999999"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_corner_gray"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/item_my_like_message_iv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/video_place_holder" />
+
+        <TextView
+            android:id="@+id/item_my_like_item_content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:ellipsize="end"
+            android:text="我们都爱斯诺克"
+            android:textColor="@color/color333333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_margin="10dp"
+        android:background="@color/color999999" />
+</LinearLayout>

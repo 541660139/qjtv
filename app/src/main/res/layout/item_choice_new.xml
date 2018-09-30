@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <!--android:background="@drawable/shape_choice_bg"-->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <cn.jzvd.JZVideoPlayerStandard
+                android:id="@+id/videoplayer"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:transitionName="@string/tu" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/tv_choice_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="视频标题"
+                android:transitionName="@string/zi" />
+
+            <LinearLayout
+                android:id="@+id/ll_dianzhan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/ll_pinglun"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_dianzan"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/dainzan"
+                    android:transitionName="@string/tu1" />
+
+                <TextView
+                    android:id="@+id/tv_dianzan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="10" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_pinglun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_pinglun"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/pinglun"
+                    android:transitionName="@string/tu2" />
+
+                <TextView
+                    android:id="@+id/tv_pinglun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="10" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bgColor_divier"
+            android:visibility="visible" />
+    </LinearLayout>
+</RelativeLayout>

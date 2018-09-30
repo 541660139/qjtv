@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="2dp">
+
+    <ImageView
+        android:id="@+id/item_fragment_mall_big_iv"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginRight="13dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/video_place_holder" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/item_fragment_mall_big_iv"
+        android:layout_toRightOf="@id/item_fragment_mall_big_iv"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_fragment_mall_desc_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:gravity="left|top"
+            android:lines="2"
+            android:text="会计学中商品的定义是商品流通企业外购或委托加工完成，验收入库用于销售的各种商品。在人教版必修一政治书中的定义是用于交换的劳动产品。商品的基本属性是价值和使用价值。"
+            android:textColor="@color/color333333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/item_fragment_mall_free_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="包邮"
+            android:visibility="invisible"
+            android:textColor="@color/color333333"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/item_fragment_mall_place_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="武汉"
+            android:visibility="invisible"
+            android:textColor="@color/color999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_fragment_mall_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="￥500"
+            android:textColor="@color/colorOrigin"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@id/item_fragment_mall_big_iv"
+        android:layout_toRightOf="@id/item_fragment_mall_big_iv"
+        android:background="@color/f3f3f3" />
+</RelativeLayout>

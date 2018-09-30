@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/item_message_layout_info_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/item_message_layout_head_civ"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/video_place_holder" />
+
+        <TextView
+            android:id="@+id/item_message_layout_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="嘟嘟嘟"
+            android:textColor="@color/color333333"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/item_message_layout_good_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="2dp"
+            android:src="@mipmap/like_pic" />
+
+        <TextView
+            android:id="@+id/item_message_layout_good_number_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="bottom"
+            android:text="5"
+            android:textColor="@color/color333333"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_message_layout_content_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_message_layout_info_ll"
+        android:layout_marginLeft="50dp"
+        android:text="想你超好看，太虐了，想给编剧寄刀片，我可怜的秀妍啊！"
+        android:textColor="@color/color333333"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/item_message_layout_content_tv"
+        android:layout_marginTop="20dp"
+        android:background="@color/color999999" />
+</RelativeLayout>

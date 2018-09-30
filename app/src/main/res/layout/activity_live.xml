@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/activity_live_rl"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="200dp">-->
+
+    <com.lwd.qjtv.app.utils.LiveDanmakuVideoPlayer
+        android:id="@+id/danmaku_player"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <!--<ImageView-->
+    <!--android:layout_width="20dp"-->
+    <!--android:layout_height="20dp"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:src="@mipmap/ic_launcher" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_above="@+id/marjortornament_adv_astv"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:src="@mipmap/ic_launcher" />-->
+
+    <!--<com.vid.snooker.view.AutoScrollTv-->
+    <!--android:id="@+id/marjortornament_adv_astv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:background="@color/black"-->
+    <!--android:ellipsize="marquee"-->
+    <!--android:marqueeRepeatLimit="1"-->
+    <!--android:singleLine="true"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:text="斯诺克TV大法好，信斯诺克TV得永生。      斯诺克TV大法好，信斯诺克TV得永生。斯诺克TV大法好，信斯诺克TV得永生。      斯诺克TV大法好，信斯诺克TV得永生。斯诺克TV大法好，信斯诺克TV得永生。      斯诺克TV大法好，信斯诺克TV得永生。斯诺克TV大法好，信斯诺克TV得永生。      斯诺克TV大法好，信斯诺克TV得永生。 "-->
+    <!--/>-->
+    <!--</RelativeLayout>-->
+
+    <ImageView
+        android:id="@+id/activity_live_back_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@mipmap/back"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_tab_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/danmaku_player"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/activity_live_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/bgColor_divier" />
+    </LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/activity_live_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_tab_view" />
+
+    <TextView
+        android:id="@+id/activity_live_gonggao_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/activity_live_viewpager"
+        android:background="@color/white"
+        android:maxLength="60"
+        android:maxLines="2"
+        android:padding="5dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

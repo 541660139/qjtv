@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_all_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/item_my_comment_item_avater_civ"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/video_place_holder" />
+
+        <LinearLayout
+            android:id="@+id/item_my_comment_item_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/item_my_comment_item_avater_civ"
+            android:layout_alignTop="@id/item_my_comment_item_avater_civ"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/item_my_comment_item_avater_civ"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_my_comment_item_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大壮壮" />
+
+            <TextView
+                android:id="@+id/item_my_comment_item_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1小时前" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_my_comment_item_see_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:text="去看看>"
+            android:textColor="@color/colorOrigin" />
+
+        <TextView
+            android:id="@+id/item_my_comment_item_comment_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/item_my_comment_item_ll"
+            android:layout_below="@id/item_my_comment_item_ll"
+            android:text="高清回放高清回放高清回放高清回放高清回放高清回放高清回放高清回放" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_corner_gray"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/item_my_comment_message_iv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/video_place_holder" />
+
+        <TextView
+            android:id="@+id/item_my_comment_item_content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:ellipsize="end"
+            android:text="我们都爱斯诺克"
+            android:textColor="@color/color333333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_margin="10dp"
+        android:background="@color/color999999" />
+</LinearLayout>

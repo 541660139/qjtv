@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/live_land_half_control"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/video_view_half_control_title_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+        <ImageView
+            android:id="@+id/video_view_half_control_back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:src="@drawable/land_live_half_back_bg" />
+            <TextView
+                android:id="@+id/video_view_half_control_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="2017年世界锦标赛  丁俊晖VS奥沙利文"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/video_view_half_control_lock_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/land_live_half_back_bg" />
+        <!-- 全屏控制器输入框-->
+        <LinearLayout
+            android:id="@+id/mEditTextBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent">
+
+            <LinearLayout
+                android:id="@+id/mEditTextTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:baselineAligned="false"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/video_view_half_control_layout_pause_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@null"
+                    android:src="@mipmap/h_stop" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginStart="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:visibility="invisible"
+                    android:layout_weight="1">
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/live_land_full_re_ci"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_marginEnd="10dp"-->
+                        <!--android:layout_marginLeft="15dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:layout_marginStart="15dp"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="热词"-->
+                        <!--android:textColor="#1d1d1d"-->
+                        <!--android:visibility="gone" />-->
+
+
+                    <!--<View-->
+                        <!--android:id="@+id/view2"-->
+                        <!--android:layout_width="0.5dp"-->
+                        <!--android:layout_height="25dp"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_toEndOf="@id/live_land_full_re_ci"-->
+                        <!--android:layout_toRightOf="@id/live_land_full_re_ci"-->
+                        <!--android:background="#cccccc" />-->
+
+                    <!--<View-->
+                        <!--android:id="@+id/view3"-->
+                        <!--android:layout_width="0.5dp"-->
+                        <!--android:layout_height="25dp"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_toLeftOf="@id/live_land_msg_send"-->
+                        <!--android:layout_toStartOf="@id/live_land_msg_send"-->
+                        <!--android:background="#cccccc" />-->
+                    <TextView
+                        android:id="@+id/video_view_start_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:text="00:00:00"
+                        android:textSize="13sp"
+                        android:visibility="gone"
+                        />
+                    <SeekBar
+                        android:id="@+id/live_land_msg_input"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:progressDrawable="@drawable/seekbar_define_style"
+                        android:thumb="@drawable/seekbar_thumb"
+                        android:visibility="visible"
+                        />
+                    <TextView
+                        android:id="@+id/video_view_end_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="00:00:00"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:visibility="gone"
+                        />
+                    <!--<TextView-->
+                        <!--android:id="@+id/live_land_msg_send"-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_marginEnd="26dp"-->
+                        <!--android:layout_marginRight="26dp"-->
+                        <!--android:background="@drawable/dialog_circle_corner_bg"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="发送"-->
+                        <!--android:visibility="gone"-->
+                        <!--android:layout_alignParentTop="true"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_alignParentEnd="true" />-->
+                </LinearLayout>
+
+
+                <CheckBox
+                    android:id="@+id/dan_mu_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:button="@drawable/live_land_full_danmu"/>
+
+
+                <ImageView
+                    android:id="@+id/live_land_full"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:src="@drawable/land_live_half_switch_full_bg" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

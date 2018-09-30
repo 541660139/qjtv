@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/item_guess_champion_civ"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/video_place_holder" />
+
+        <TextView
+            android:id="@+id/item_guess_champion_name_tv"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLength="4"
+            android:text="塞尔比"
+            android:textColor="@color/color333333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/item_guess_champion_rank_tv"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="10dp"
+            android:text="世界排名：1"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textColor="@color/color666666"
+            android:textSize="14sp" />
+
+
+        <com.lwd.qjtv.view.GuessChampionRaceView
+            android:id="@+id/item_guess_champion_raceview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/color999999" />
+
+</LinearLayout>

@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <!--首页标题-->
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="个人中心"
+                android:textColor="@color/color666666"
+                android:textSize="19dp" />
+
+            <ImageView
+                android:id="@+id/fragment_mine_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/setting" />
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/loading_bg" />
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:id="@+id/fragment_mine_goto_login_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/fragment_mine_login_iv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/default_head" />
+
+            <TextView
+                android:id="@+id/fragment_mine_login_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/fragment_mine_login_iv"
+                android:text="登录"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/fragment_mine_login_userinfo_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/enter" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_mine_login_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fragment_mine_head_civ"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@mipmap/login_icon" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/fragment_mine_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="李某空调"
+                        android:textSize="13sp" />
+
+                    <ImageView
+
+                        android:id="@+id/fragment_mine_lv_iv"
+                        android:layout_width="35dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="7dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="经验"
+                        android:textSize="13sp" />
+
+                    <RelativeLayout
+                        android:layout_width="90dp"
+                        android:layout_height="8dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <ProgressBar
+                            android:id="@+id/fragment_mine_experience_pb"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:layout_centerInParent="true"
+                            android:progress="5"
+                            android:progressDrawable="@drawable/level_progressbar"
+                            android:secondaryProgress="10" />
+
+                        <TextView
+                            android:id="@+id/fragment_mine_exp_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="0/10"
+                            android:textSize="7sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--<ImageView-->
+            <!--android:id="@+id/fragment_mine_shop_enter_iv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@mipmap/ic_launcher"-->
+            <!--/>-->
+
+            <ImageView
+                android:id="@+id/fragment_mine_enter_mall_tv"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/duixian"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/loading_bg" />
+
+        <LinearLayout
+            android:background="@color/white"
+            android:id="@+id/fragment_mine_money_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/fragment_mine_recharge_yue_ll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/fragment_mine_recharge_yue_iv"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/recharge_balance" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="充值/余额"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/loading_bg" />
+
+            <LinearLayout
+                android:id="@+id/fragment_mine_recharge_use_ll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/fragment_mine_recharge_use_iv"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/recharge_cost" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="收支记录"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/loading_bg" />
+
+            <LinearLayout
+                android:id="@+id/fragment_mine_recharge_warehouse_ll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/fragment_mine_mybag_iv"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/personal_warehouse" />
+
+                    <ImageView
+                        android:id="@+id/fragment_mine_new_gift_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@id/fragment_mine_mybag_iv"
+                        android:layout_alignTop="@id/fragment_mine_mybag_iv"
+                        android:src="@mipmap/red_point" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="个人仓库"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/loading_bg" />
+
+        <ScrollView
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/fragment_mine_guess_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="17dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/guess_center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="竞猜中心"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/fragment_mine_guess_new_iv"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/new_pic" />
+
+                    <ImageView
+                        android:id="@+id/fragment_mine_guess_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/enter" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/loading_bg" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/loading_bg"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/fragment_mine_watch_history_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="17dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/watch_history" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="观看历史"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/fragment_mine_watch_history_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/enter" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fragment_mine_nba_guess_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="17dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/guess_center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="NBA竟猜中心"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/fragment_mine_nba_guess_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/enter" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/loading_bg" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/loading_bg"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/fragment_mine_my_setting_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="17dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/my_setting" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="我的设置"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/fragment_mine_my_setting_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/enter" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/loading_bg"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/fragment_mine_lucky_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="17dp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/fragment_mine_everyday_lucky"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@mipmap/luck_pan" />
+
+                        <ImageView
+                            android:id="@+id/fragment_mine_red_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/fragment_mine_everyday_lucky"
+                            android:src="@mipmap/red_point" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="每日抽奖"
+                        android:textSize="14sp" />
+
+
+                    <ImageView
+                        android:id="@+id/fragment_mine_lucky_new_iv"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/new_pic" />
+
+                    <ImageView
+                        android:id="@+id/fragment_mine_lucky_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/enter" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fragment_mine_video_collection_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="17dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/video_collection" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="视频收藏"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/fragment_mine_video_collection_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/enter" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/loading_bg" />
+
+                <LinearLayout
+                    android:id="@+id/fragment_mine_jiaqun_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="17dp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@mipmap/jiaqun" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="联系客服"
+                        android:textSize="14sp" />
+
+
+                    <ImageView
+                        android:id="@+id/fragment_mine_jiaqun_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/enter" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/loading_bg"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/fragment_mine_tuiguang_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="17dp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@mipmap/tuiguang" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="分享下载链接"
+                        android:textSize="14sp" />
+
+
+                    <ImageView
+                        android:id="@+id/fragment_mine_tuiguang_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/enter" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/loading_bg"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

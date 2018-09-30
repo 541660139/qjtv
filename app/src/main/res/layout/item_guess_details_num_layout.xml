@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.lwd.qjtv.view.RaceView
+        android:id="@+id/item_guess_details_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <CheckBox
+        android:id="@+id/item_guess_details_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/address_receiver_rb_selector"
+        android:button="@null"
+        android:checked="false"
+        android:visibility="gone" />
+</LinearLayout>

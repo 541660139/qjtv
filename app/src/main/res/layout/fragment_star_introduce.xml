@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_above="@+id/fragment_comment_message_bottom_ll"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/fragment_star_introduce_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/x30">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/fragment_star_introduce_title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="奥沙利文"
+                        android:textColor="@color/color222222"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/fragment_star_introduce_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Ronnie O'Sullivan"
+                    android:textColor="@color/color9a9a9a"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="个人简介"
+                    android:textColor="@color/color222222"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/fragment_star_introduce_desc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:lines="3"
+                    android:lineSpacingExtra="1.5dp"
+                    android:text="2017年1月丁俊晖在温布利大师赛创造历史并打出职业生涯第一个满分杆，一举进入决赛，中央电视台特意为此转播了丁俊晖，决赛在经历了13局较量最后丁俊晖以3-10输给素有'火箭人'之称的英格兰名将罗尼·奥沙利文。"
+                    android:textColor="@color/color9a9a9a"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/fragment_star_introduce_xl_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:src="@mipmap/xl" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y20"
+                android:background="@color/f0f0f0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/x20"
+                android:text="粉丝留言"
+                android:textColor="@color/color666666"
+                android:textSize="16sp" />
+            <!--<com.scwang.smartrefresh.layout.SmartRefreshLayout-->
+                <!--android:id="@+id/fragment_star_introduce_refreshlayout"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fragment_star_introduce_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+            <!--</com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/fragment_comment_message_bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/y18">
+
+
+        <ImageView
+            android:id="@+id/fragment_comment_message_emoj_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/x15"
+            android:src="@mipmap/emoj" />
+
+        <EditText
+            android:id="@+id/fragment_star_introduce_text_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/circle_corner_edit"
+            android:drawableLeft="@mipmap/edit"
+            android:gravity="center_vertical"
+            android:hint="说点什么吧~"
+            android:lines="1"
+            android:padding="10dp"
+            android:textColorHint="@color/color9a9a9a"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/fragment_star_introduce_send_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:padding="9dp"
+            android:text="发表"
+            android:textColor="@color/colorOrigin"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <com.lwd.qjtv.view.EmojiBoard
+        android:id="@+id/input_emoji_board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lwd.qjtv"
+    android:installLocation="preferExternal">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.NTERACT_ACROSS_USERS_FULL" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Required -->
+    <uses-permission android:name="com.lwd.ymqtv.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+
+    <application
+        android:name="com.lwd.qjtv.app.WEApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+         <provider
+         android:name="android.support.v4.content.FileProvider"
+         android:authorities="com.lwd.qjtv.fileprovider"
+         android:exported="false"
+         android:grantUriPermissions="true">
+         <meta-data
+         android:name="android.support.FILE_PROVIDER_PATHS"
+         android:resource="@xml/provider_seven"/>
+         </provider>
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.UserActivity" />
+
+        <!-- 欢迎页 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomAppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 引导页 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 弹幕视屏页 -->
+
+
+        <!-- 主页面 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 测试页面 -->
+
+
+        <!-- 关于我们 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.AboutUsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 竞猜冠军 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.GuessChampionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 反馈页面 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.FeedBackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 找回密码 -->
+
+
+        <!-- &lt;!&ndash; 引导页面 &ndash;&gt; -->
+        <!-- <activity -->
+        <!-- android:name=".mvp.ui.activity.GuideActivity" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:windowSoftInputMode="stateHidden|stateAlwaysHidden" /> -->
+
+
+        <!-- 登陆页面 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 更多页面 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.MoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 更多下注 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.MoreBetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 竞猜详情 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.GuessDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 更多视频 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.MoreVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 排行榜页面 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.RankActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 收货地址页面 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.AddressManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 注册页面 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 搜索页面 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 商城搜索 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.MallSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 赛程页面 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.MatchTimeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 设置页面 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 用户中心 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.UserInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 观看记录 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.WatchRecordeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <!-- 充值页面 -->
+
+
+        <!-- 竞猜中心 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.GuessCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan" />
+
+        <!-- 竞猜中心 -->
+
+
+        <!-- nba竞猜中心 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.NBAGuessCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan" />
+
+        <!-- 提交订单 -->
+
+
+        <!-- 添加收货地址 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.AddAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan" />
+
+        <!-- 视频详情 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.VideoDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize" />
+
+        <!-- 我的订单 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.MyOrderActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan" />
+
+        <!-- 明星详情 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.StarDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize" />
+
+        <!-- 学球详情 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.LearnBallDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize" />
+
+        <!-- 视频收藏 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.CollectionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan" />
+
+        <!-- 微信支付 -->
+        <activity
+            android:name="com.lwd.qjtv.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wxe87d9d69af0a59ae" />
+            </intent-filter>
+        </activity>
+
+        <!-- 充值消费 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.RechargeCostActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan" />
+
+        <!-- 充值成功页面l -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.PaySuccessActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan" />
+
+        <!-- 直播页面 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.LiveActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize" />
+
+        <!-- 我的竞猜 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.MyGuessActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan" />
+
+        <!-- 充值页面 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.RechargeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan" />
+
+        <!-- 个人仓库 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.PersonalWarehouseActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan" />
+
+        <!-- WebView页面 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.WebViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan" />
+        <!-- WebView页面 -->
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.WebActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan" />
+
+        <!-- 支付宝支付activity -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!--屏蔽融云-->
+        <!-- imlib config begin -->
+
+        <!--<meta-data-->
+        <!--android:name="RONG_CLOUD_APP_KEY"-->
+        <!--android:value="ik1qhw09ipabp" />-->
+
+        <!--&lt;!&ndash; <meta-data &ndash;&gt;-->
+        <!--&lt;!&ndash; android:name="RONG_CLOUD_APP_KEY" &ndash;&gt;-->
+        <!--&lt;!&ndash; android:value="8w7jv4qb8awfy" /> &ndash;&gt;-->
+
+        <!--<service-->
+        <!--android:name="io.rong.imlib.ipc.RongService"-->
+        <!--android:exported="true"-->
+        <!--android:process=":ipc" />-->
+        <!--<service-->
+        <!--android:name="io.rong.imlib.ReConnectService"-->
+        <!--android:exported="true" />-->
+
+        <!--<receiver-->
+        <!--android:name="io.rong.imlib.ConnectChangeReceiver"-->
+        <!--android:exported="true" />-->
+        <!--<receiver-->
+        <!--android:name="io.rong.imlib.HeartbeatReceiver"-->
+        <!--android:process=":ipc" />-->
+        <!-- imlib config end -->
+        <!--<receiver-->
+            <!--android:name=".app.utils.SealNotificationReceiver"-->
+            <!--android:exported="true">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />-->
+                <!--<action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED" />-->
+                <!--<action android:name="io.rong.push.intent.MESSAGE_CLICKED" />-->
+                <!--<action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--屏蔽融云-->
+
+
+        <!-- share分享 -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent1106205573" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="Mob-AppKey"
+            android:value="1ed39ff2c1db2" />
+        <meta-data
+            android:name="Mob-AppSecret"
+            android:value="b53b8964db75c7e556b41660a2a7efe5" />
+        <!-- 微信分享回调 -->
+        <activity
+            android:name="com.lwd.qjtv.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.WebAddressActivity" />
+        <!-- 5b1f2174a40fa33da1000081 -->
+        <!-- 友盟统计 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5b1f2174a40fa33da1000081" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="ymq" />
+        <!-- 友盟统计 -->
+
+
+        <!-- 必选： SDK 核心功能 -->
+        <!-- 第三方相关,向第三方推送服务请求 token 的服务 -->
+        <!--<service-->
+        <!--android:name="io.rong.push.core.PushRegistrationService"-->
+        <!--android:exported="false" />-->
+
+        <!--&lt;!&ndash; 处理 push 消息相关的服务 &ndash;&gt;-->
+        <!--<service-->
+        <!--android:name="io.rong.push.core.MessageHandleService"-->
+        <!--android:exported="true" />-->
+
+        <!--&lt;!&ndash; push服务 &ndash;&gt;-->
+        <!--<service-->
+        <!--android:name="io.rong.push.PushService"-->
+        <!--android:exported="true"-->
+        <!--android:process="io.rong.push"> &lt;!&ndash; push进程，可以改名 &ndash;&gt;-->
+        <!--</service>-->
+
+        <!-- <service -->
+        <!-- android:name=".app.utils.AlarmService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:process="system"></service> -->
+
+
+        <!-- push 相关事件接收器 -->
+        <!--<receiver-->
+        <!--android:name="io.rong.push.PushReceiver"-->
+        <!--android:process="io.rong.push"> &lt;!&ndash; 此处进程可以改名，名称需要和PushService所在进程统一 &ndash;&gt;-->
+        <!--&lt;!&ndash; 心跳事件 &ndash;&gt;-->
+        <!--<intent-filter>-->
+        <!--<action android:name="io.rong.push.intent.action.HEART_BEAT" />-->
+        <!--</intent-filter>-->
+        <!--&lt;!&ndash; 网络变动事件 &ndash;&gt;-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+        <!--</intent-filter>-->
+        <!--&lt;!&ndash; 部分用户事件 &ndash;&gt;-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.BOOT_COMPLETED" />-->
+        <!--</intent-filter>-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.USER_PRESENT" />-->
+        <!--<action android:name="android.intent.action.ACTION_POWER_CONNECTED" />-->
+        <!--<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!--
+        autolayout meta
+        将设计图的宽高配置后,配合AutoLauout控件使用,在设计图尺寸以外的其它尺寸手机上,也能达到和设计图一样的效果
+        -->
+        <meta-data
+            android:name="design_width"
+            android:value="1080" />
+        <meta-data
+            android:name="design_height"
+            android:value="1920" />
+        <!-- glide配置 -->
+        <meta-data
+            android:name="com.jess.arms.widget.imageloader.glide.GlideConfiguration"
+            android:value="GlideModule" />
+
+        <!-- arms配置 -->
+        <meta-data
+            android:name="com.lwd.qjtv.app.GlobalConfiguration"
+            android:value="ConfigModule" />
+
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.MatchCollectionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.MatchSearchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.MatchCollectionMoreActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan" />
+
+        <!-- SDK核心功能,必须添加 -->
+        <!--<activity-->
+        <!--android:name="cn.jpush.android.ui.PushActivity"-->
+        <!--android:configChanges="orientation|keyboardHidden"-->
+        <!--android:exported="false"-->
+        <!--android:theme="@android:style/Theme.NoTitleBar">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="cn.jpush.android.ui.PushActivity" />-->
+
+        <!--<category android:name="android.intent.category.DEFAULT" />-->
+        <!--<category android:name="com.example.jpushdemo" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <!-- SDK核心功能,必须添加 -->
+        <!--<service-->
+        <!--android:name="cn.jpush.android.service.DownloadService"-->
+        <!--android:enabled="true"-->
+        <!--android:exported="false" />-->
+
+        <!-- SDK核心功能,必须添加 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <!--<service-->
+        <!--android:name="cn.jpush.android.service.PushService"-->
+        <!--android:enabled="true"-->
+        <!--android:exported="false">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="cn.jpush.android.intent.REGISTER" />-->
+        <!--<action android:name="cn.jpush.android.intent.REPORT" />-->
+        <!--<action android:name="cn.jpush.android.intent.PushService" />-->
+        <!--<action android:name="cn.jpush.android.intent.PUSH_TIME" />-->
+        <!--</intent-filter>-->
+        <!--</service>-->
+
+
+        <!--&lt;!&ndash; Rich push 核心功能 since 2.0.6 &ndash;&gt;-->
+        <!--<activity-->
+        <!--android:name="cn.jpush.android.ui.PopWinActivity"-->
+        <!--android:exported="false"-->
+        <!--android:theme="@style/MyDialogStyle" />-->
+
+
+        <!--<receiver-->
+        <!--android:name="cn.jpush.android.service.PushReceiver"-->
+        <!--android:enabled="true"-->
+        <!--android:exported="false">-->
+        <!--<intent-filter android:priority="1000">-->
+        <!--<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />-->
+        <!--&lt;!&ndash; 必须添加  显示通知栏 &ndash;&gt;-->
+        <!--<category android:name="com.example.jpushdemo" />-->
+        <!--</intent-filter>-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.USER_PRESENT" />-->
+        <!--<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+        <!--</intent-filter>-->
+        <!--&lt;!&ndash; 可选的 &ndash;&gt;-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.PACKAGE_ADDED" />-->
+        <!--<action android:name="android.intent.action.PACKAGE_REMOVED" />-->
+
+        <!--<data android:scheme="package" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!-- SDK核心功能,必须添加 -->
+        <!--<receiver-->
+        <!--android:name="cn.jpush.android.service.AlarmReceiver"-->
+        <!--android:exported="false" />-->
+
+
+        <!-- Required since JCore 1.1.7. SDK 核心功能-->
+        <!--<provider-->
+        <!--android:name="cn.jpush.android.service.DataProvider"-->
+        <!--android:authorities="com.lwd.ymqtv.DataProvider"-->
+        <!--android:exported="false" />-->
+
+        <!-- Required since JMessage 2.7.0 SDK 核心功能-->
+        <!--<provider-->
+        <!--android:name="cn.jpush.im.android.helpers.ipc.IMProvider"-->
+        <!--android:authorities="com.lwd.ymqtv.IMProvider"-->
+        <!--android:exported="false" />-->
+
+        <!--&lt;!&ndash; Required JMessage SDK核心功能&ndash;&gt;-->
+        <!--<receiver-->
+        <!--android:name="cn.jpush.im.android.helpers.IMReceiver"-->
+        <!--android:enabled="true"-->
+        <!--android:exported="false">-->
+
+        <!--</receiver>-->
+
+
+        <!--&lt;!&ndash; 必须的，可以获取统计数据 &ndash;&gt;-->
+        <!--<meta-data-->
+            <!--android:name="JPUSH_CHANNEL"-->
+            <!--android:value="developer-default" />-->
+        <!--&lt;!&ndash; 应用的appkey &ndash;&gt;-->
+        <!--<meta-data-->
+            <!--android:name="JPUSH_APPKEY"-->
+            <!--android:value="a0c7d91f4f34bdba4b12fdc5" />-->
+
+        <receiver
+            android:name="com.lwd.qjtv.app.utils.jmessageutils.MyReceiver"
+            android:exported="false"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.lwd.footballtv" />
+            </intent-filter>
+        </receiver>
+
+        <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调-->
+        <receiver android:name="com.lwd.qjtv.app.utils.jmessageutils.MyJPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="com.lwd.footballtv"></category>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.lwd.qjtv.mvp.ui.activity.NBAGuessDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.MatchCollectionListActivity" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.CommentActivity" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.MyInvitationActivity" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.MyMessageActivity" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.PushCommunityActivity" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.MyCommunityActivity" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.MyBBSMessageListActivity" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.UpvoteListActivity" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.WebNewActivity" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.MyCommentListActivity" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.MyLikeListActivity" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.LikeAvaterListActivity" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.LearnBallMoreActivity" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.MallActivity" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.MineFActivity" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.MinePublisActivity" />
+        <activity android:name="com.lwd.qjtv.mvp.ui.activity.CommuntiyDetailActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_image_item"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/item_suggset_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/video_place_holder" />
+
+            <ImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/pic_delete"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_suggestion_add_photo_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_image_item"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="添加照片" />
+
+</RelativeLayout>

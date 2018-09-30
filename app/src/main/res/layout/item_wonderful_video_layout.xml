@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zq="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/item_wonderful_video_big_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:id="@+id/item_fragment_watchball_layout_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.lwd.qjtv.view.RoundImageViewTo
+                android:id="@+id/item_fragment_watchball_big_riv"
+                android:layout_width="170dp"
+                android:layout_height="105dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ttzb_place_holder"
+                zq:borderRadius="5dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_fragment_watchball_score_tv"
+            android:layout_width="39dp"
+            android:layout_height="17dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/dialog_circle_corner_bg"
+            android:gravity="center"
+            android:text="8.0"
+            android:textColor="@color/color666666"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/item_wonderful_video_big_rl"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_wonderful_video_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="2017年世锦赛"
+            android:textColor="@color/color333333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/item_wonderful_video_match_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="丁俊晖VS奥沙利文"
+            android:textColor="@color/color333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/item_wonderful_video_time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:text="20分16秒"
+            android:textColor="@color/color333333"
+            android:textSize="13sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>

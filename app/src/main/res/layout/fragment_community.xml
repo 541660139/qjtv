@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--首页标题-->
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="7dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="社区"
+            android:textColor="@color/color666666"
+            android:textSize="19dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/fragment_community_message_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:text="消息" />
+
+            <ImageView
+                android:id="@+id/fragment_community_message_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@mipmap/red_point"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/color999999" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/fragment_community_smartrefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--轮播图-->
+                <com.lwd.qjtv.view.AutoRollLayout
+                    android:id="@+id/fragment_community_banner_auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:visibility="visible" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!-- 明星视频-标题 -->
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/fragment_watch_ball_star_iv"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/video_place_holder" />
+
+                        <TextView
+                            android:id="@+id/fragment_watch_ball_star_title_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/fragment_watch_ball_star_iv"
+                            android:text="明星视频"
+                            android:textColor="@color/color333333"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/fragment_watch_ball_star_more_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp"
+                            android:text="更多>"
+                            android:textColor="@color/color999999"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+                    <!-- 明星视频-内容 -->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/fragment_watch_ball_star_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:scrollbars="none" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/f3f3f3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/community_x"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="我的讨论区"
+                    android:textColor="@color/colorOrigin" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fragment_community_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

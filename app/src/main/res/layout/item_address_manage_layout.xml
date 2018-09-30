@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/item_address_manager_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_address_manager_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:lines="1"
+                    android:text="嘟嘟嘟"
+                    android:textColor="@color/color333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/item_address_manager_default_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:background="@drawable/circle_corner_address"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:text="默认"
+                    android:textColor="@color/colorOrigin"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/item_address_ll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@id/item_address_manager_ll"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_address_manager_phone_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="159****6285"
+                    android:textColor="@color/color333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/item_address_manager_address_tv"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLength="17"
+                    android:text="湖北省武汉市江岸区三阳路华清园"
+                    android:textColor="@color/color999999"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/item_address_manager_edit_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@id/item_address_ll"
+                android:src="@mipmap/edit" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

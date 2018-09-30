@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_race_view_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/x30"
+    android:background="@drawable/circle_corner_edit"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/item_race_view_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="胜"
+        android:gravity="center"
+        android:textColor="@color/color333333"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/item_race_view_peilv_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="赔率：1.65"
+        android:lines="1"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:textColor="@color/color5690f2"
+        android:textSize="13sp" />
+</LinearLayout>

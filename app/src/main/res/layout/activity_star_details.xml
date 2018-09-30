@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:adjustViewBounds="true"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:id="@+id/activity_star_details_big_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/video_place_holder"/>
+
+                <ImageView
+                    android:id="@+id/activity_star_details_back_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:src="@mipmap/back" />
+            </RelativeLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/activity_star_details_tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_star_details_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <com.lwd.qjtv.view.LoadingPageView
+            android:id="@+id/loading_framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/item_gift_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <ImageView
+            android:id="@+id/item_gift_bg_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circle_corner_address"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_gift_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="礼物"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/item_gift_coin_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="1积分"
+        android:textSize="10sp" />
+</LinearLayout>
